@@ -1,0 +1,22 @@
+def tourist():
+   folder = "C:\Users\Public\JES Photo Filters\JES Tourist Code"
+   file = "\pt1.png", "\pt2.png", "\pt3.png", "\pt4.png", "\pt5.png", "\pt6.png", "\pt7.png", "\pt8.png", "\pt9.png"
+   print file
+   for run in range(len(file)):
+    show(makePicture(folder + file[run]))
+   for run in range (len(file)):
+    pic = makePicture(folder + file[run])
+    pixel = getPixel(pic, 0, 0)
+    pixels = getPixels(pic)
+    print "Width is", getWidth(pic), "height is", getHeight(pic)
+    print "Pixel value at 0, 0 is: ", pixels [0]
+    explore(pic)
+   
+def findMedian(passedInArray):
+ for y in range(0,8):
+  for x in range(0,8):
+   if(passedInArray[x]>passedInArray[x+1]):
+    temp=passedInArray[x+1]
+    passedInArray[x+1]=passedInArray[x]
+    passedInArray[x]=temp;
+ return passedInArray[4]
